@@ -723,26 +723,12 @@ section {
 
 /* ------------------SELLERS SECTION------------------ */
 
-.sellers-cards-list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-}
-.sellers-card-item {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--white);
-}
-
 .sellers-subtitle {
-  border-bottom: 1px solid rgba(17, 17, 17, 0.1);
-  border-left: 1px solid rgba(17, 17, 17, 0.1);
-  border-right: 1px solid rgba(17, 17, 17, 0.1);
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  border-top: none;
   border-radius: 0 0 15px 15px;
   width: 100%;
-  max-width: 335px;
-  padding: 24px 0;
+  padding: 24px 10px;
   margin: 0 auto;
 
   font-weight: 600;
@@ -750,14 +736,6 @@ section {
   line-height: 1.3;
   text-transform: uppercase;
   text-align: center;
-
-  @media only screen and (min-width: 768px) {
-    max-width: 344px;
-  }
-
-  @media only screen and (min-width: 1200px) {
-    max-width: 368px;
-  }
 }
 
 .overlay {
@@ -778,30 +756,47 @@ section {
 .sellers-img {
   border-radius: 15px 15px 0 0;
   width: 100%;
-  max-width: 335px;
-  height: 464px;
-
-  @media only screen and (min-width: 768px) {
-    width: 344px;
-  }
-
-  @media only screen and (min-width: 1200px) {
-    width: 368px;
-  }
+  height: auto;
+  aspect-ratio: 368 / 464;
+  object-fit: cover;
 
   transition: filter 250ms linear;
 }
 .sellers-text {
   line-height: 1.3;
-  color: #fafafa;
+  color: var(--light);
 
   position: absolute;
   z-index: 10;
-  width: 335px;
-  padding: 0 35px;
+  width: 100%;
+  padding: 0 20px;
+  text-align: center;
+  box-sizing: border-box;
 
   opacity: 0;
   transition: opacity 250ms linear;
+}
+.sellers-swiper {
+  width: 100%;
+  padding-bottom: 30px;
+  overflow: hidden;
+  height: 550px;
+}
+
+.sellers-cards-list.swiper-wrapper {
+  display: flex;
+}
+
+.sellers-card-item.swiper-slide {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--white);
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--orange) !important;
 }
 
 /* ---------------------FEEDBACK SECTION------------------- */
@@ -818,44 +813,42 @@ section {
   }
 }
 
-.feedback-section-title {
-  margin-bottom: 74px;
-
-  @media only screen and (min-width: 768px) {
-    margin-bottom: 91px;
-  }
-}
-.feedback-list {
+.feedback-list.swiper-wrapper {
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 28px;
+  height: 280px;
 
-  margin-bottom: 32px;
+  margin-bottom: 0px;
+  margin-left: 0;
+  margin-right: 0;
+  background-color: var(--light);
 }
-.feedback-item {
+.feedback-item.swiper-slide {
   display: flex;
   flex-direction: column;
   gap: 24px;
   justify-content: center;
   align-items: center;
   padding: 56px 24px 24px;
+  height: 200px;
+  width: 100%;
 
   position: relative;
   border: 1px solid rgba(17, 17, 17, 0.1);
   border-radius: 15px;
-  width: 360px;
-  height: 200px;
 
   box-shadow: 0 9px 100px 0 rgba(17, 17, 17, 0.03);
   background-color: var(--white);
 }
+
 .reviewer-img {
   position: absolute;
-  top: -20%;
+  top: 0;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
+  z-index: 10;
 }
+
 .reviewer-name {
   font-weight: 600;
   font-size: 18px;
@@ -867,17 +860,19 @@ section {
   text-align: center;
   color: rgba(17, 17, 17, 0.7);
 }
-.feedback-btn {
-  margin: 0 auto;
 
+.feedback-btn {
   border: 1px solid var(--orange);
   background-color: transparent;
   border-radius: 100px;
   padding: 12px 28px;
+  margin: 10px auto 0;
 
   font-weight: 600;
 
-  transition: all 250ms linear;
+  transition:
+    background-color 250ms linear,
+    color 250ms linear;
 
   @media only screen and (min-width: 768px) {
     padding: 14px 40px;
@@ -892,21 +887,10 @@ section {
   }
 }
 
-.left-card,
-.right-card {
-  display: none;
-}
-
-@media only screen and (min-width: 768px) {
-  .right-card {
-    display: flex;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  .left-card {
-    display: flex;
-  }
+.feedback-swiper {
+  padding-top: 80px;
+  padding-bottom: 50px;
+  overflow: visible;
 }
 
 /* ---------------FOOTER------------------ */

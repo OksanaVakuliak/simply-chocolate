@@ -18,7 +18,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./css/styles.css" />
-    <script src="./main.js" type="module"></script>
+    <script src="./js/main.js" type="module"></script>
   </head>
   <body>
     <header class="header">
@@ -112,6 +112,7 @@
           </a>
         </div>
       </section>
+
       <section id="benefits-id" class="benefits-section">
         <h2 class="visually-hidden">Our Benefits</h2>
         <div class="container">
@@ -162,6 +163,7 @@
           </ul>
         </div>
       </section>
+
       <section class="ingredients-section padding-section">
         <div class="container">
           <h2 class="ingredients-title section-title">
@@ -268,6 +270,7 @@
           </ul>
         </div>
       </section>
+
       <section
         id="chocolate-process-id"
         class="chocolate-process-section padding-section"
@@ -329,6 +332,7 @@
           </div>
         </div>
       </section>
+
       <section class="products-section padding-section">
         <div class="container">
           <h2 class="section-title">
@@ -426,114 +430,122 @@
           </ul>
         </div>
       </section>
+
       <section class="sellers-section padding-section">
         <div class="container">
           <h2 class="section-title"><span class="accent">Top</span> sellers</h2>
 
-          <ul class="sellers-cards-list">
-            <li class="sellers-card-item left-card">
-              <div class="overlay">
-                <img
-                  src="./img/sellers/choc&nuts.jpg"
-                  srcset="./img/sellers/choc&nuts@2x.jpg 2x"
-                  alt="CHOCOLATE WITH NUTS"
-                  class="sellers-img"
-                />
-                <p class="sellers-text">
-                  Chocolate with nuts is a delectable combination that brings
-                  together the smoothness of chocolate and the crunchiness of
-                  nuts. Whether it's milk chocolate, dark chocolate, or white
-                  chocolate, the addition of nuts adds a whole new dimension of
-                  flavor and texture.
-                </p>
-              </div>
-              <h3 class="sellers-subtitle">CHOCOLATE WITH NUTS</h3>
-            </li>
+          <div class="swiper sellers-swiper">
+            <ul class="sellers-cards-list swiper-wrapper">
+              <li class="sellers-card-item swiper-slide">
+                <div class="overlay">
+                  <img
+                    src="./img/sellers/choc&nuts.jpg"
+                    srcset="./img/sellers/choc&nuts@2x.jpg 2x"
+                    alt="CHOCOLATE WITH NUTS"
+                    class="sellers-img"
+                  />
+                  <p class="sellers-text">
+                    Chocolate with nuts is a delectable combination that brings
+                    together the smoothness of chocolate and the crunchiness of
+                    nuts. Whether it's milk chocolate, dark chocolate, or white
+                    chocolate, the addition of nuts adds a whole new dimension
+                    of flavor and texture.
+                  </p>
+                </div>
+                <h3 class="sellers-subtitle">CHOCOLATE WITH NUTS</h3>
+              </li>
 
-            <li class="sellers-card-item">
-              <div class="overlay">
-                <img
-                  src="./img/sellers/choc&fruits.jpg"
-                  srcset="./img/sellers/choc&fruits@2x.jpg 2x"
-                  alt="CHOCOLATE WITH FRUITS"
-                  class="sellers-img"
-                />
-                <p class="sellers-text">
-                  Chocolate with fruit is an unbeatable combination of two of
-                  the tastiest things in the world. This dessert combines
-                  delicate and aromatic chocolate with fresh and juicy fruits,
-                  creating a true poetry of taste.
-                </p>
-              </div>
-              <h3 class="sellers-subtitle">CHOCOLATE WITH FRUITS</h3>
-            </li>
+              <li class="sellers-card-item swiper-slide">
+                <div class="overlay">
+                  <img
+                    src="./img/sellers/choc&fruits.jpg"
+                    srcset="./img/sellers/choc&fruits@2x.jpg 2x"
+                    alt="CHOCOLATE WITH FRUITS"
+                    class="sellers-img"
+                  />
+                  <p class="sellers-text">
+                    Chocolate with fruit is an unbeatable combination of two of
+                    the tastiest things in the world. This dessert combines
+                    delicate and aromatic chocolate with fresh and juicy fruits,
+                    creating a true poetry of taste.
+                  </p>
+                </div>
+                <h3 class="sellers-subtitle">CHOCOLATE WITH FRUITS</h3>
+              </li>
 
-            <li class="sellers-card-item right-card">
-              <div class="overlay">
-                <img
-                  src="./img/sellers/dark-chocolate.jpg"
-                  srcset="./img/sellers/dark-chocolate@2x.jpg 2x"
-                  alt="DARK CHOCOLATE"
-                  class="sellers-img"
-                />
-                <p class="sellers-text">
-                  Dark chocolate is a rich and indulgent treat that is beloved
-                  by many chocolate enthusiasts. It is made from cocoa beans,
-                  which are roasted, ground, and then processed to produce
-                  chocolate liquor. Dark chocolate contains a higher percentage
-                  of cocoa solids compared to milk chocolate.
-                </p>
-              </div>
-              <h3 class="sellers-subtitle">DARK CHOCOLATE</h3>
-            </li>
-          </ul>
+              <li class="sellers-card-item swiper-slide">
+                <div class="overlay">
+                  <img
+                    src="./img/sellers/dark-chocolate.jpg"
+                    srcset="./img/sellers/dark-chocolate@2x.jpg 2x"
+                    alt="DARK CHOCOLATE"
+                    class="sellers-img"
+                  />
+                  <p class="sellers-text">
+                    Dark chocolate is a rich and indulgent treat that is beloved
+                    by many chocolate enthusiasts. It is made from cocoa beans,
+                    which are roasted, ground, and then processed to produce
+                    chocolate liquor. Dark chocolate contains a higher
+                    percentage of cocoa solids compared to milk chocolate.
+                  </p>
+                </div>
+                <h3 class="sellers-subtitle">DARK CHOCOLATE</h3>
+              </li>
+            </ul>
+            <div class="swiper-pagination"></div>
+          </div>
         </div>
       </section>
       <section id="feedback-id" class="feedback-section padding-section">
         <div class="container">
-          <h2 class="feedback-section-title section-title">
+          <h2 class="section-title">
             <span class="accent">Chocolate</span> is loved
           </h2>
-          <ul class="feedback-list">
-            <li class="feedback-item left-card">
-              <img
-                src="./img/feedbacks/victoria-dobrzhanska.png"
-                alt="Victoria Dobrzhanska"
-                class="reviewer-img"
-              />
-              <h3 class="reviewer-name">Victoria Dobrzhanska</h3>
-              <p class="feedback-text">
-                I love this chocolate bar. Perfect combination of light crispy
-                wafer, covered in a thin layer chocolate.
-              </p>
-            </li>
-            <li class="feedback-item">
-              <img
-                src="./img/feedbacks/nazar-babenko.png"
-                alt="Nazar Babenko"
-                class="reviewer-img"
-              />
-              <h3 class="reviewer-name">Nazar Babenko</h3>
-              <p class="feedback-text">
-                This chocolate confection is a delight! A delight! The wafer is
-                light and crisp, the hazelnut cream is smooth, and the chocolate
-                is good.
-              </p>
-            </li>
-            <li class="feedback-item right-card">
-              <img
-                src="./img/feedbacks/olena-kampusch.png"
-                alt="Olena Kampusch"
-                class="reviewer-img"
-              />
-              <h3 class="reviewer-name">Olena Kampusch</h3>
-              <p class="feedback-text">
-                Chocolate is a family favourite treat. Love the delicious smooth
-                chocolate and the creaminess inside. The wafer is soft but
-                crunchy.
-              </p>
-            </li>
-          </ul>
+          <div class="swiper feedback-swiper">
+            <ul class="feedback-list swiper-wrapper">
+              <li class="feedback-item swiper-slide">
+                <img
+                  src="./img/feedbacks/victoria-dobrzhanska.png"
+                  alt="Victoria Dobrzhanska"
+                  class="reviewer-img"
+                />
+                <h3 class="reviewer-name">Victoria Dobrzhanska</h3>
+                <p class="feedback-text">
+                  I love this chocolate bar. Perfect combination of light crispy
+                  wafer, covered in a thin layer chocolate.
+                </p>
+              </li>
+              <li class="feedback-item swiper-slide">
+                <img
+                  src="./img/feedbacks/nazar-babenko.png"
+                  alt="Nazar Babenko"
+                  class="reviewer-img"
+                />
+                <h3 class="reviewer-name">Nazar Babenko</h3>
+                <p class="feedback-text">
+                  This chocolate confection is a delight! A delight! The wafer
+                  is light and crisp, the hazelnut cream is smooth, and the
+                  chocolate is good.
+                </p>
+              </li>
+              <li class="feedback-item swiper-slide">
+                <img
+                  src="./img/feedbacks/olena-kampusch.png"
+                  alt="Olena Kampusch"
+                  class="reviewer-img"
+                />
+                <h3 class="reviewer-name">Olena Kampusch</h3>
+                <p class="feedback-text">
+                  Chocolate is a family favourite treat. Love the delicious
+                  smooth chocolate and the creaminess inside. The wafer is soft
+                  but crunchy.
+                </p>
+              </li>
+            </ul>
+            <div class="swiper-pagination feedback-pagination"></div>
+          </div>
+
           <button type="button" class="feedback-btn">Leave a review</button>
         </div>
       </section>

@@ -89,7 +89,6 @@ const onFormSubmit = (event) => {
   const formData = new FormData(event.currentTarget);
   let hasError = false;
 
-  // Валідація текстових полів
   formData.forEach((value, key) => {
     const input = event.currentTarget.querySelector(`[name="${key}"]`);
     const errorMsg = input.parentNode.querySelector(".error-message");
