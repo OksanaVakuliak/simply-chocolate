@@ -1190,7 +1190,7 @@ section {
   margin-left: auto;
   background: none;
   border: none;
-  stroke: #ffffff;
+  stroke: var(--white);
   cursor: pointer;
   padding: 0;
   margin-bottom: 88px;
@@ -1247,4 +1247,229 @@ section {
   fill: var(--white);
 
   transition: fill 250ms linear;
+}
+
+/* ---------------FEEDBACK FORM---------------- */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 47, 66, 0.4);
+
+  transition:
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  z-index: 999;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.7);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 311px;
+  background-color: var(--white);
+  border-radius: 15px;
+  padding: 32px 24px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media only screen and (min-width: 768px) {
+    width: 517px;
+    padding: 40px;
+  }
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+
+  @media only screen and (min-width: 768px) {
+    top: 24px;
+    right: 24px;
+  }
+}
+
+.modal-close-icon {
+  stroke: var(--black);
+}
+
+.modal-title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: var(--black);
+  margin-bottom: 32px;
+}
+.form-field {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (min-width: 768px) {
+    margin-bottom: 18px;
+  }
+}
+
+.form-label {
+  font-size: 12px;
+  color: rgba(64, 64, 64, 0.3);
+  margin-bottom: 4px;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.form-input {
+  width: 100%;
+  height: 45px;
+  border: 1.5px solid rgba(17, 17, 17, 0.05);
+  border-radius: 8px;
+  padding-left: 42px;
+  background-color: transparent;
+  outline: transparent;
+  transition: border-color 250ms linear;
+
+  &:hover,
+  &:focus {
+    border-color: var(--orange);
+  }
+
+  &:hover + .input-icon,
+  &:focus + .input-icon {
+    stroke: var(--orange);
+  }
+}
+
+.input-icon {
+  position: absolute;
+  top: 39%;
+  left: 18px;
+  transform: translateY(-50%);
+  fill: none;
+  stroke: #404040;
+  transition: stroke 250ms linear;
+}
+
+.form-textarea {
+  width: 100%;
+  min-height: 91px;
+  border: 1.5px solid rgba(17, 17, 17, 0.05);
+  border-radius: 8px;
+  padding: 14px 18px;
+  resize: none;
+  outline: transparent;
+
+  transition: border-color 250ms linear;
+
+  &:hover,
+  &:focus {
+    border-color: var(--orange);
+  }
+}
+
+.form-textarea::placeholder {
+  font-size: 13px;
+  color: rgba(64, 64, 64, 0.3);
+}
+
+.checkbox-wrapper {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.checkbox-field {
+  margin-bottom: 32px;
+}
+
+.checkbox-label {
+  font-size: 12px;
+  line-height: 1.33;
+  color: rgba(64, 64, 64, 0.6);
+  display: flex;
+  align-items: center;
+}
+
+.custom-checkbox {
+  border: 1.5px solid rgba(17, 17, 17, 0.05);
+  border-radius: 6px;
+  padding: 5px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+  transition:
+    background-color 250ms linear,
+    border-color 250ms linear;
+}
+
+.form-checkbox {
+  &:focus + .checkbox-label .custom-checkbox {
+    outline: 1px solid var(--orange);
+  }
+  &:checked + .checkbox-label .custom-checkbox {
+    background-color: var(--orange);
+    border-color: var(--orange);
+    fill: var(--white);
+  }
+}
+.policy-link {
+  font-size: 12px;
+  line-height: 1.3;
+
+  text-decoration: underline;
+  color: var(--orange);
+}
+
+.submit-btn {
+  display: block;
+  min-width: 93px;
+  padding: 12px 28px;
+  background-color: var(--orange);
+  color: var(--white);
+  border: none;
+  border-radius: 100px;
+  font-weight: 600;
+
+  transition: background-color 250ms linear;
+
+  &:hover,
+  &:focus {
+    background-color: var(--beige);
+    color: var(--orange);
+  }
+
+  @media only screen and (min-width: 768px) {
+    padding: 14px 40px;
+  }
+}
+
+.error-message {
+  font-size: 10px;
+  color: #ed3333;
+  margin-top: 4px;
+  min-height: 12px;
+  display: block;
 }

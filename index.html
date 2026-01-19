@@ -699,5 +699,110 @@
         </div>
       </div>
     </div>
+
+    <!-- FEEDBACK FORM -->
+    <div class="backdrop is-hidden">
+      <div class="modal">
+        <button type="button" class="modal-close-btn" aria-label="Close modal">
+          <svg width="24" height="24" class="modal-close-icon">
+            <use href="./img/sprite.svg#icon-x"></use>
+          </svg>
+        </button>
+
+        <h2 class="modal-title">
+          LEAVE A REVIEW <br />
+          ABOUT <span class="accent">OUR CHOCOLATE</span>
+        </h2>
+
+        <form class="review-form" novalidate м>
+          <div class="form-field">
+            <label for="user-name" class="form-label">Name</label>
+            <div class="input-wrapper">
+              <input
+                type="text"
+                name="user-name"
+                id="user-name"
+                class="form-input"
+                required
+              />
+              <svg class="input-icon" width="18" height="18">
+                <use href="./img/sprite.svg#icon-user"></use>
+              </svg>
+              <span class="error-message"></span>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="user-email" class="form-label">Email</label>
+            <div class="input-wrapper">
+              <input
+                type="email"
+                name="user-email"
+                id="user-email"
+                class="form-input"
+                required
+              />
+              <svg class="input-icon" width="18" height="18">
+                <use href="./img/sprite.svg#icon-mail"></use>
+              </svg>
+              <span class="error-message"></span>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="user-phone" class="form-label">Phone number</label>
+            <div class="input-wrapper">
+              <input
+                type="tel"
+                name="user-phone"
+                id="user-phone"
+                class="form-input"
+                required
+              />
+              <svg class="input-icon" width="18" height="18">
+                <use href="./img/sprite.svg#icon-phone"></use>
+              </svg>
+              <span class="error-message"></span>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="user-comment" class="form-label">Comment</label>
+            <textarea
+              name="user-comment"
+              id="user-comment"
+              class="form-textarea"
+              placeholder="Enter text"
+            ></textarea>
+            <span class="error-message"></span>
+          </div>
+
+          <div class="checkbox-field">
+            <input
+              type="checkbox"
+              name="privacy-policy"
+              id="privacy-policy"
+              class="form-checkbox visually-hidden"
+              required
+            />
+            <label for="privacy-policy" class="checkbox-label">
+              <div class="checkbox-wrapper">
+                <span class="custom-checkbox">
+                  <svg class="checkbox-icon" width="10" height="10">
+                    <use href="./img/sprite.svg#icon-custom-checkbox"></use>
+                  </svg>
+                </span>
+                <p>
+                  I accept the terms and conditions of the
+                  <a href="#" class="policy-link">Privacy Policy</a>
+                </p>
+              </div> </label
+            ><span class="error-message"></span>
+          </div>
+
+          <button type="submit" class="submit-btn">Send</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
